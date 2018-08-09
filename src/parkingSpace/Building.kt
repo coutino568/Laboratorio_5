@@ -3,7 +3,7 @@ package parkingSpace
 public class Building{
     val owner="Default owner";
     val address="Default address";
-    //var levels: ArrayList<Level>
+    var levels: ArrayList<Level>= ArrayList();
 
     fun addLevel(levelToAdd: Level):Boolean{
         return true
@@ -17,8 +17,13 @@ public class Building{
         return true
     }
 
-    fun createLevel(nameOfNewLevel:String,idOfNewLevel:Int, colorOfNewLevel:String,nameOfFile:String):Level{
-        return Level;
+    fun createLevel(nameOfNewLevel:String,idOfNewLevel:Int, colorOfNewLevel:String,nameOfFile:String){
+
+    }
+    fun filterColor(color: String): Level? {
+        val color = levels.filter { it.getColor() == color }
+        return  color[0]
+    return null
     }
 
 

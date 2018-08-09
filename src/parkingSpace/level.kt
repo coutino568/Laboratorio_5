@@ -1,13 +1,14 @@
 package parkingSpace
 
+
 import javax.xml.ws.soap.Addressing
 
 public class Level{
     val id=0;
     val name="";
     val color="";
-    //arraylist the walls
-    //arraylist de parking slots
+    var walls: ArrayList<Wall> = ArrayList();
+    var parkingSlots: Arraylist<parkingSpace>=ArrayList();
 
 
 
@@ -20,5 +21,14 @@ public class Level{
         return true
     }
 
+    fun getColor():String{
+        return this.color
+    }
 
+    fun getName():String{
+        return this.name
+    }
+    fun getId():Int{
+        return this.id
+    }
 }
